@@ -1,0 +1,123 @@
+.narbar-app h1{
+    text-align: center;
+}
+
+.narbar-app h4{
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+
+
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #04AA6D;
+}
+li a.right{
+    float: right;
+}
+
+.content-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px
+}
+.content-header label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+} 
+div .search{
+    color: green;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+div .search:hover{
+    background-color: green;
+    color: white;
+}
+.text {
+    width: 300px; /* Set the width of the input field */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+.text::placeholder {
+
+    width: 100px; 
+    text-align: center; 
+}
+
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  .column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  /* @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+   */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
