@@ -45,28 +45,29 @@ window.addEventListener('DOMContentLoaded', function(event) {
 });
 
 // Function to save recipe to localStorage
-function saveRecipeToLocal(recipe) {
-    let recipes = JSON.parse(localStorage.getItem('recipes')) || [];
-    recipes.push(recipe);
-    localStorage.setItem('recipes', JSON.stringify(recipes));
-}
+// function saveRecipeToLocal(recipe) {
+//     let recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+//     recipes.push(recipe);
+//     localStorage.setItem('recipes', JSON.stringify(recipes));
+// }
+
 
 // Function to display recipe card
-function displayRecipeCard(recipe) {
-    const recipeCard = document.createElement('div');
-    recipeCard.innerHTML = `
-        <div class="card">
-            <div class="card-content">
-                <h3 class="card-title">${recipe.name}</h3>
-                <img class="card-image" src="${recipe.image}">
-                <p class="card-description"><strong>Ingredients:</strong></p>
-                <p class="card-description"><strong>Method:</strong></p>
-                <p class="card-description">${recipe.method}</p>
-                <button class="add-button1" data-index="${index}">Add</button>
-            </div>
-        </div>`;
-    document.getElementById('menu').appendChild(recipeCard);
-}
+// function displayRecipeCard(recipe) {
+//     const recipeCard = document.createElement('div');
+//     recipeCard.innerHTML = `
+//         <div class="card">
+//             <div class="card-content">
+//                 <h3 class="card-title">${recipe.name}</h3>
+//                 <img class="card-image" src="${recipe.image}">
+//                 <p class="card-description"><strong>Ingredients:</strong></p>
+//                 <p class="card-description"><strong>Method:</strong></p>
+//                 <p class="card-description">${recipe.method}</p>
+//                 <button class="add-button1" data-index="${index}">Add</button>
+//             </div>
+//         </div>`;
+//     document.getElementById('menu').appendChild(recipeCard);
+// }
 
 
 

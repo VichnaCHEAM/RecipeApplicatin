@@ -157,7 +157,7 @@ function editRecipe(index) {
             };
             reader.readAsDataURL(imageInput.files[0]);
         } else {
-            saveRecipesToLocalStorage(); // Save edited recipe to local storage
+            //saveRecipesToLocalStorage(); // Save edited recipe to local storage
             displayRecipes();
         }
 
@@ -182,19 +182,7 @@ function handleEdit(event) {
 // Add event listener for edit button click
 recipeList.addEventListener('click', handleEdit);
 
-// Function to save recipes to localStorage
-function saveRecipesToLocalStorage() {
-    localStorage.setItem('recipes', JSON.stringify(recipes));
-}
-
-// recipeList.addEventListener('click', handleAdd);
-function handleAdd(event) {
-    if (event.target.classList.contains('add-button')) {
-        const index = event.target.dataset.index;
-        const recipe = recipes[index];
-        // Construct the URL with query parameters for ingredient data
-        const queryString = `?ingredients=${recipe.ingredients.join(',')}`;
-        // Redirect to Menu.html with the ingredient data appended to the URL
-        window.location.href = `index.html${queryString}`;
-    }
-}
+// // Function to save recipes to localStorage
+// function saveRecipesToLocalStorage() {
+//     localStorage.setItem('recipes', JSON.stringify(recipes));
+// }
