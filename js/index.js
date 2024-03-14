@@ -1,12 +1,3 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-
 window.addEventListener('DOMContentLoaded', function(event) {
     let menuItemString = localStorage.getItem("recipes");
     let menuItems = menuItemString ? JSON.parse(menuItemString) : [];  
