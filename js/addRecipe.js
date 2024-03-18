@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
         recipes = JSON.parse(storedRecipes);
         let footerFunction = function(index) {
             return `
-                  <button class="edit-button" data-index="${index}">Edit</button>
-                  <button class="delete-button" data-index="${index}">Delete</button>
+                    <button class="edit-button" data-index="${index}">Edit</button>
+                    <button class="delete-button" data-index="${index}">Delete</button>
                 `;
         }
         displayRecipes(document.querySelector('#recipe-list'), recipes, footerFunction);

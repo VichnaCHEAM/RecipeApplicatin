@@ -1,3 +1,12 @@
+//Function for narbar
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 // THIS IS SEYHA'S CODE
 
 function displayRecipes(target, menuItems, footerFunction) {
@@ -7,7 +16,7 @@ function displayRecipes(target, menuItems, footerFunction) {
         recipeDiv.innerHTML = `
             <div class="card">
                 <div class="card-content">
-                       ${generateRecipeCardContent(item)}
+                        ${generateRecipeCardContent(item)}
                 </div>
                 <div class="card-footer">
                     ${footerFunction(index)}
@@ -36,16 +45,7 @@ function generateRecipeCardContent(recipe) {
     `;
 }
 
-// THIS IS VICHNA'S CODE
-//Function for narbar
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-      x.className += " responsive";
-  } else {
-      x.className = "topnav";
-  }
-}
+
 // Display recipes function and other parts of your code remain the same
 const recipeList = document.querySelector('#recipe-list');
 const noRecipes = document.getElementById('no-recipes');

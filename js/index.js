@@ -1,5 +1,3 @@
-
-
 window.addEventListener('DOMContentLoaded', function(event) {
     let menuItemString = localStorage.getItem("recipes");
     let menuItems = menuItemString ? JSON.parse(menuItemString) : [];  
