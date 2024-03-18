@@ -4,7 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const storedRecipes = localStorage.getItem('recipes');
     if (storedRecipes) {
         recipes = JSON.parse(storedRecipes);
-        displayRecipes();
+        let footerFunction = function(index) {
+            return `
+                    <button class="edit-button" data-index="${index}">Edit</button>
+                    <button class="delete-button" data-index="${index}">Delete</button>
+                `;
+        }
+        displayRecipes(document.querySelector('#recipe-list'), recipes, footerFunction);
     }
 });
 
@@ -54,14 +60,15 @@ function handleDelete(event) {
         const index = event.target.dataset.index;
         recipes.splice(index, 1);
         displayRecipes(); // Update the displayed recipes after deletion
-        
+
         // Save recipes to localStorage
         saveRecipesToLocalStorage();
     }
 }
 
 recipeList.addEventListener('click', handleDelete); // Move this line outside the function
-displayRecipes();
+displayRecipes(document.querySelector('#recipe-list'), recipes, function() {
+});
 
 // Function to edit a recipe
 function editRecipe(index) {
@@ -90,7 +97,7 @@ function editRecipe(index) {
             reader.onload = function(event) {
                 recipe.image = event.target.result;
                 saveRecipesToLocalStorage(); // Save edited recipe to local storage
-                displayRecipes();
+                displayRecipes(document.querySelector('#recipe-list'), recipes, footer);
             };
             reader.readAsDataURL(imageInput.files[0]);
         } else {
